@@ -1,0 +1,13 @@
+# Jekyll build/cache
+_site/
+.jekyll-cache/
+.sass-cache/
+Gemfile.lock
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

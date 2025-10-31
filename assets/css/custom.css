@@ -1,0 +1,152 @@
+/* Global variables */
+:root {
+    --field-height: 56px;
+    --field-pad-x: 14px;
+    --gap-row: 0.75rem;
+    --gap-block: 1.25rem;
+}
+
+/* Contact: meta row */
+#contact .contact-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    margin: 0.5rem 0 var(--gap-block) 0;
+    text-align: left;
+}
+#contact .contact-meta li {
+    display: flex;
+    align-items: center;
+}
+#contact .contact-meta a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+#contact .contact-meta .icon {
+    line-height: 1;
+}
+#contact .contact-meta a .text {
+    margin-left: .5rem;
+}
+
+/* Contact: two-column name + email */
+.form-row-2col {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+    margin-bottom: var(--gap-row);
+}
+.form-row-2col .col {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Contact: email inline [local] [@] [domain/custom] */
+.email-inline {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+/* Contact: equal heights for inputs/selects */
+.form-row-2col input[type="text"],
+.form-row-2col select,
+.email-inline .domain-custom {
+    height: var(--field-height);
+    padding: 0 var(--field-pad-x);
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Contact: @ separator box */
+.email-inline .at-sep {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--field-height);
+    min-width: 44px;
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 6px;
+    background: rgba(0,0,0,.04);
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Contact: equal widths for local/domain/custom */
+#email-local { flex: 1; min-width: 0; }
+.email-inline .domain-select,
+.email-inline .domain-custom { flex: 1; min-width: 0; }
+
+/* Contact: show custom domain only when needed */
+.email-inline .domain-custom { display: none; }
+.email-inline.show-custom .domain-custom { display: block; }
+
+/* Contact: select normalization */
+.email-inline .domain-select {
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: var(--field-height);
+}
+
+/* Contact: spacing below message and button */
+#contact form .row { row-gap: var(--gap-row); }
+#contact textarea[name="message"] { margin-top: .25rem; }
+#contact input[type="submit"] { margin-top: var(--gap-row); }
+
+/* Portfolio: <details> styling */
+.details-block {
+    text-align: left;
+    margin-top: 1rem;
+}
+.details-block summary {
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+}
+.details-block summary::-webkit-details-marker { display: none; }
+.details-block summary::after { content: ' ▾'; opacity: .6; }
+.details-block[open] summary::after { content: ' ▴'; }
+.details-block ul {
+    list-style: disc;
+    padding-left: 1.1rem;
+    margin: .5rem 0 0 0;
+}
+.details-block li {
+    margin: .25rem 0;
+    line-height: 1.6;
+}
+
+/* About: center image/text vertically */
+.about-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-row .image-col,
+.about-row .text-col {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.about-row .text-col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.about-row .text-col p { margin: 0; }
+
+/* Responsive tweaks */
+@media screen and (max-width: 736px) {
+    .form-row-2col { flex-direction: column; }
+    .email-inline .domain-select,
+    .email-inline .domain-custom { width: 100%; }
+}
+
+/* Fallback when the list keeps class="icons" */
+#contact .icons { display:flex; flex-wrap:wrap; gap:8px 20px; text-align:left; }
+#contact .icons li { display:flex; align-items:center; }
+#contact .icons a { display:inline-flex; align-items:center; text-decoration:none; }
+#contact .icons .label, #contact .icons .text { margin-left:.5rem; }
+#contact .contact-meta li:nth-child(2) { margin-right: 20px; }

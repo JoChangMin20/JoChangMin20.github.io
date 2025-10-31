@@ -1,0 +1,66 @@
+---
+title: Contact
+icon: fa-envelope
+order: 3
+---
+
+<p style="margin:0 0 1.25rem 0;">아래 양식으로 연락 주시면 빠르게 회신드리겠습니다.</p>
+
+<ul class="contact-meta">
+    <li>
+        <i class="icon fa-envelope" aria-hidden="true"></i>
+        <span class="text">아래 양식으로 연락해주세요</span>
+    </li>
+    <li>
+        <a href="https://github.com/JoChangMin20" target="_blank" rel="noopener">
+            <i class="icon fab fa-github" aria-hidden="true"></i>
+            <span class="text">@JoChangMin20</span>
+        </a>
+    </li>
+    <li>
+        <a href="mailto:mine2060@naver.com">
+            <i class="icon fa-envelope" aria-hidden="true"></i>
+            <span class="text">mine2060@naver.com</span>
+        </a>
+    </li>
+</ul>
+
+<form id="contact-form" method="post" action="https://formspree.io/your-email@example.com">
+    <div class="row" style="row-gap:0.75rem;">
+        <!-- 이름 + 이메일 한 줄 -->
+        <div class="12u$ form-row-2col field-group">
+            <div class="col">
+                <input type="text" name="name" placeholder="Name" aria-label="Name" required/>
+            </div>
+            <div class="col">
+                <!-- 이메일: local | @ | domain(select) | custom(inline) -->
+                <div class="email-inline" id="email-inline">
+                    <input id="email-local" type="text" placeholder="이메일명" aria-label="Email ID" required/>
+                    <span class="at-sep" aria-hidden="true">@</span>
+                    <!-- 직접 입력 칸 (custom 선택 시 표시) -->
+                    <input id="email-domain-custom" class="domain-custom" type="text" placeholder=""
+                           aria-label="Custom domain"/>
+                    <select id="email-domain" class="domain-select" aria-label="Email domain" required>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="outlook.com">outlook.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="custom">직접 입력</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="12u$ field-group">
+            <textarea name="message" placeholder="Message" rows="6" aria-label="Message" required></textarea>
+        </div>
+
+        <!-- Formspree로 넘길 완성 이메일 -->
+        <input id="email-full" name="email" type="hidden"/>
+
+        <div class="12u$ field-group">
+            <input type="submit" value="Send Message"/>
+        </div>
+    </div>
+</form>

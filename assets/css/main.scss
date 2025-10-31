@@ -1,0 +1,30 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@import "jekyll-theme-prologue";
+
+/* --- About page custom tweaks --- */
+.about-row { display:flex; align-items:center; flex-wrap:wrap; }          /* 이미지-텍스트 수직 가운데 */
+.about-row .image-col,
+.about-row .text-col { padding-top:0; padding-bottom:0; }                 /* 위아래 패딩 최소화 */
+.about-row .text-col { display:flex; align-items:center; text-align:left; }/* 텍스트 자체도 수직 가운데 */
+.about-row .text-col p { margin: 0; }                                     /* 소개문 위아래 여백 제거 */
+
+.section-stack-tight > section.box { margin: 1rem 0; }                    /* 박스 사이 여백 타이트 */
+.section-stack-tight > hr { margin: 1rem 0; }                             /* hr 여백도 타이트 */
+
+/* 깔끔한 라벨 스타일 */
+.label {
+    display: inline-block;
+    padding: .15rem .45rem;
+    border-radius: 999px;
+    background: #eee;
+    font-size: .8rem;
+    line-height: 1;
+    margin-right: .25rem;
+}
+
+/* Contact 섹션 간격 */
+#contact .container p { margin: 0.75rem 0 1rem; }
+#contact .icons { margin-bottom: 1.25rem; text-align: left; }
+#contact form .row { row-gap: 0.75rem; }

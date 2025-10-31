@@ -1,0 +1,67 @@
+# Developer's Note: This is a sample _config.yml file offered with
+# jekyll-theme-prologue for your convenience. To use it, move it to your
+# project's root directory. Please note that the following lines are
+# NECESSARY for Prologue to work correctly:
+#
+# theme: jekyll-theme-prologue
+# collections: [sections]
+#
+# They activate the theme and tell Jekyll to find your homepage content
+# in /_sections. Note where "sections" starts with an underscore
+# and where it doesn't. The social settings will make links to
+# Twitter, etc., but only if you give the URL.
+#
+# Also, be sure to customize url and baseurl for your site.
+#
+# ---------------------------------------------------------------
+#
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: 조창민의 포트폴리오
+subtitle: 조창민의 포트폴리오
+description: >
+  데이터로 설계된 백엔드를 지향하는 백엔드 & 데이터 분석 포트폴리오.
+author: 조창민
+email: mine2060@naver.com
+avatar: assets/images/profile.jpg
+
+# 배포 경로 선택:
+url: "https://JoChangMin20.github.io" # 로컬 테스트는 비워둬도 OK (배포 시 https://your-domain 로 교체)
+baseurl: "/portfolio"        # ← 루트로 배포 시 빈 문자열
+
+# 테마: remote_theme 권장 (GitHub Pages 친화)
+remote_theme: chrisbobbe/jekyll-theme-prologue
+
+# Social settings
+# Make sure to include the full url including protocol, e.g. https://github.com/chrisbobbe
+twitter_url:
+facebook_url:
+googleplus_url:
+instagram_url:
+linkedin_url:
+github_url: https://github.com/JoChangMin20
+stackoverflow_url:
+pinterest_url:
+slack_url:
+dribbble_url:
+
+# Google Analytics Tracking ID goes here:
+google_analytics:
+
+plugins:
+  - jekyll-remote-theme
+  # (가능하면 여기엔 GitHub Pages가 허용하는 플러그인만 쓰기)
+collections: [sections]

@@ -1,0 +1,85 @@
+---
+title: Portfolio
+icon: fa-th
+order: 2
+---
+
+<p>현업 시나리오를 최대한 모사해 <em>데이터 신뢰성</em>과 <em>실용성</em>에 초점을 맞춘 프로젝트들입니다.</p>
+
+<div class="row">
+    <!-- sugarCare -->
+    <div class="6u 12u$(mobile)">
+        <div class="item">
+            <a href="#sugarCare-detail" class="image fit">
+                <img src="{{ 'assets/images/sugarcare.jpg' | relative_url }}" alt="sugarCare" />
+            </a>
+            <header>
+                <h3>sugarCare — 혈당 분석 & 예측</h3>
+                <p style="margin:.25rem 0 0 0;">
+                    <span class="label">Python</span>
+                    <span class="label">Pandas</span>
+                    <span class="label">XGBoost</span>
+                    <span class="label">RandomForest</span>
+                    <span class="label">LinearReg</span>
+
+                </p>
+            </header>
+            <p style="margin-top:.5rem;">
+                개인 혈당 로그를 전처리·피처엔지니어링하여 <em>단기 혈당 예측</em>을 제공합니다.
+                <a href="https://github.com/JoChangMin20/sugarCare" target="_blank" rel="noopener">GitHub Repo</a>
+            </p>
+            <p style="margin:.25rem 0 0 0;">
+                <strong>사용 기술</strong> · Python, Pandas, scikit-learn(LinearReg/RandomForest), XGBoost,
+                (시각화) Matplotlib, (웹 연동) Flask/FastAPI
+            </p>
+        </div>
+    </div>
+
+    <!-- HonestPick -->
+    <div class="6u 12u$(mobile)">
+        <div class="item">
+            <a href="#honestpick-detail" class="image fit">
+                <img src="{{ 'assets/images/honestpick.jpg' | relative_url }}" alt="HonestPick" />
+            </a>
+            <header>
+                <h3>HonestPick — 리뷰 신뢰도 백엔드</h3>
+                <p style="margin:.25rem 0 0 0;">
+                    <span class="label">Java</span>
+                    <span class="label">Spring MVC</span>
+                    <span class="label">MyBatis</span>
+                    <span class="label">MySQL/Oracle</span>
+                    <span class="label">REST API</span>
+                </p>
+            </header>
+            <p style="margin-top:.5rem;">
+                신고·필터링·통계 API로 <em>리뷰 데이터 신뢰성</em>을 높입니다.
+                <a href="https://github.com/JoChangMin20/HonestPick" target="_blank" rel="noopener">GitHub Repo</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<details id="sugarCare-detail" class="details-block" style="margin-top:1rem;">
+    <summary><strong>sugarCare 상세 보기</strong></summary>
+    <ul>
+        <li><strong>기간/역할</strong>: '25. 9. 22. ~ 10. 15.(약 3주) / 데이터 전처리·모델링·웹 연동</li>
+        <li><strong>문제정의</strong>: 개인 혈당 변동을 예측해 사전 관리에 도움</li>
+        <li><strong>데이터</strong>: 혈당/식사/활동 로그(결측·이상치 처리, 시간 기반 파생)</li>
+        <li><strong>모델</strong>: Linear Regression, RandomForest, XGBoost 비교 후 지표 기반 선택</li>
+        <li><strong>특징</strong>: 이동통계(평균/최대/변화율), 식사·운동 플래그, 요일/시간대 패턴</li>
+        <li><strong>평가</strong>: MAE/RMSE, 시계열 분할(누수 방지) <em>수치 추후 기입</em></li>
+        <li><strong>결과</strong>: 예측치 시각화 + 임계치 알림(고/저혈당)</li>
+
+    </ul>
+</details>
+
+<details id="honestpick-detail" class="details-block" style="margin-top:1rem;">
+    <summary><strong>HonestPick 상세 보기</strong></summary>
+    <ul>
+        <li><strong>기간/역할</strong>: '25. 5. 8. ~ 6. 27. (약 7주) / 백엔드(회원/인증·신고·필터링·통계)</li>
+        <li><strong>아키텍처</strong>: <u>JSP/Servlet 기반 MVC(Model2)</u>, <u>DAO + JDBC</u>, DB: Oracle</li>
+        <li><strong>데이터 계층</strong>: Connection Pool, <u>PreparedStatement로 SQL 인젝션 방지</u>, 트랜잭션/예외 처리 표준화</li>
+        <li><strong>핵심 로직</strong>: 신고 사유 스키마, 중복 패턴 탐지, 블랙리스트·가중치 기반 노출 제어</li>
+        <li><strong>운영</strong>: 관리자용 지표 API(신고 추이, 차단율, 사용자 행동 패턴), 에러/접근 로그(Trace ID)</li>
+    </ul>
+</details>
