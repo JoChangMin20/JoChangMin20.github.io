@@ -39,11 +39,12 @@ email: mine2060@naver.com
 avatar: assets/images/profile.jpg
 
 # 배포 경로 선택:
-url: "https://JoChangMin20.github.io" # 로컬 테스트는 비워둬도 OK (배포 시 https://your-domain 로 교체)
-baseurl: "/portfolio"        # ← 루트로 배포 시 빈 문자열
+url: "https://JoChangMin20.github.io"
+baseurl: ""
 
 # 테마: remote_theme 권장 (GitHub Pages 친화)
-remote_theme: chrisbobbe/jekyll-theme-prologue
+#remote_theme: chrisbobbe/jekyll-theme-prologue 이전 버전
+theme: jekyll-theme-prologue
 
 # Social settings
 # Make sure to include the full url including protocol, e.g. https://github.com/chrisbobbe
@@ -61,7 +62,7 @@ dribbble_url:
 # Google Analytics Tracking ID goes here:
 google_analytics:
 
-plugins:
-  - jekyll-remote-theme
+#plugins:
+#  - jekyll-remote-theme
   # (가능하면 여기엔 GitHub Pages가 허용하는 플러그인만 쓰기)
 collections: [sections]

@@ -150,3 +150,7 @@
 #contact .icons a { display:inline-flex; align-items:center; text-decoration:none; }
 #contact .icons .label, #contact .icons .text { margin-left:.5rem; }
 #contact .contact-meta li:nth-child(2) { margin-right: 20px; }
+
+/* hiding email-inline display of contact.html */
+#email-inline .domain-custom { display:none; }
+#email-inline.show-custom .domain-custom { display:inline-block; }
