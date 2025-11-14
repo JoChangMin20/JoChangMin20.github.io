@@ -27,7 +27,7 @@ order: 2
                 </header>
 
                 <p style="margin-top:.5rem;">
-                    개인 혈당 로그를 전처리·피처엔지니어링하여 <em>단기 혈당 예측</em>을 제공합니다.
+                    개인 혈당 로그를 전처리·피처엔지니어링하여 <em>단기 혈당 예측 및 관리</em> 제공 플랫폼입니다.<br>
                 </p>
 
                 <!-- 사용 기술 -->
@@ -58,6 +58,14 @@ order: 2
                         <li><strong>모델</strong>: Linear Regression, RandomForest, XGBoost 비교 후 지표 기반 선택</li>
                         <li><strong>특징</strong>: 이동통계(평균/최대/변화율), 식사·운동 플래그, 요일/시간대 패턴</li>
                         <li><strong>평가</strong>: MAE/RMSE, 시계열 분할(누수 방지) <em>수치 추후 기입</em></li>
+
+                        <li>
+                            <strong>핵심기능</strong><br>
+                            · 입력받은 혈당 데이터를 기반으로 근시간 내 예측 가능<br>
+                            · 혈당 관리에 필요한 식단 및 강도별 활동 추천<br>
+                            · 식단 입력 시 혈당 위험 등급 표시로 음식별 위험도 알림<br>
+                            · 식단 및 앞으로의 방향성을 제공해주는 챗봇
+                        </li>
                         <li><strong>결과</strong>: 예측치 시각화 + 임계치 알림(고/저혈당)</li>
                     </ul>
                 </details>
@@ -113,8 +121,14 @@ order: 2
                     <ul>
                         <li><strong>기간/역할</strong>: '25. 5. 8. ~ 6. 27. (약 7주) / 백엔드(회원·리뷰·신고 기능 구현)</li>
                         <li><strong>아키텍처</strong>: JSP/Servlet 기반 MVC(Model2), DAO + JDBC, DB: Oracle</li>
-                        <li><strong>데이터 계층</strong>: Connection Pool, PreparedStatement로 SQL 인젝션 방지, 트랜잭션/예외 처리 공통화</li>
-                        <li><strong>핵심 기능</strong>: 회원·식당·리뷰·광고 등록/수정/삭제, 카테고리/검색, 사용자별 권한(회원/관리자), 관리자 통계 서비스</li>
+                        <li><strong>데이터 계층</strong>: Connection Pool, SQL 인젝션 방지, 트랜잭션/예외 처리 공통화</li>
+                        <li>
+                            <strong>핵심 기능</strong>
+                            · 회원·식당·리뷰·광고 등록/수정/삭제<br>
+                            · 식당 카테고리/검색<br>
+                            · 사용자별 권한(회원/점주/관리자)<br>
+                            · 관리자 통계(증감 수치 시각화) 및 관리 사이트
+                        </li>
                         <li><strong>운영</strong>: 관리자 페이지에서 식당/리뷰/회원/광고 관리, 기본 로그 기록</li>
                     </ul>
                 </details>
