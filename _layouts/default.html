@@ -10,5 +10,11 @@ Jekyll integration by Chris Bobbe | chrisbobbe.github.io
 	<body>
 		{{- content -}}
 		{%- include footer.html -%}
-	</body>
+
+    <!-- 이미지 모달 -->
+        <div id="img-modal" class="img-modal">
+            <span class="img-modal-close">&times;</span>
+            <img class="img-modal-content" id="img-modal-full" alt="">
+        </div>
+    </body>
 </html>

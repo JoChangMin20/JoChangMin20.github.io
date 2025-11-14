@@ -215,3 +215,48 @@ body {
         display: inline-block;
     }
 }
+
+/* 이미지 모달 */
+.img-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,.75);
+
+    /* 기본은 숨김, is-open에서만 보이게 */
+    display: none;
+
+    /* 위에서부터 시작 + 스크롤 가능 */
+    justify-content: center;   /* 가로 가운데 */
+    align-items: flex-start;   /* 세로 위쪽 정렬 */
+    padding-top: 2rem;         /* 위 여백 */
+    overflow: auto;
+}
+
+.img-modal.is-open {
+    display: flex;
+}
+
+/* 기본 상태: 화면 크기에 맞춰서 축소해서 보여줌 */
+.img-modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    cursor: zoom-in;
+}
+
+/* zoomed 상태: 원본 크기 그대로 (스크롤로 위~끝까지 볼 수 있음) */
+.img-modal-content.zoomed {
+    max-width: 90%;
+    max-height: none;
+    cursor: zoom-out;
+}
+
+.img-modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
