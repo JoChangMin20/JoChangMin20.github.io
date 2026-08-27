@@ -65,3 +65,7 @@ google_analytics:
 #  - jekyll-remote-theme
   # (가능하면 여기엔 GitHub Pages가 허용하는 플러그인만 쓰기)
 collections: [sections]
+
+sass:
+  style: compressed
+  syntax: scss
