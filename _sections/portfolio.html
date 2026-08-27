@@ -4,7 +4,7 @@ icon: fa-th
 order: 2
 ---
 
-<p>현업 시나리오를 최대한 모사해 <em>데이터 신뢰성</em> 과 <em>실용성</em> 에 초점을 맞춘 프로젝트들입니다.</p>
+<p style="font-size: 1.05em;">현업 시나리오를 모사하여 <strong>'데이터의 신뢰성 확보'</strong>와 <strong>'AI 모델의 실용적 서빙'</strong>에 초점을 맞춘 프로젝트입니다.</p>
 
 <div class="row portfolio-list">
     <!-- sugarCare -->
@@ -23,24 +23,22 @@ order: 2
             <!-- 오른쪽 텍스트 -->
             <div class="portfolio-body">
                 <header>
-                    <h3>sugarCare — 혈당 분석 & 예측</h3>
+                    <h3>sugarCare — AI 기반 혈당 분석 및 예측 플랫폼</h3>
                 </header>
 
                 <p style="margin-top:.5rem;">
-                    개인 혈당 로그를 전처리·피처엔지니어링하여 <em>단기 혈당 예측 및 관리</em> 제공 플랫폼입니다.<br>
+                    시계열 혈당 데이터를 전처리하여 단기 수치를 예측하고, 이를 <strong>FastAPI를 통해 독립적인 마이크로서비스(API) 형태로 서빙</strong>한 AI 연동 백엔드 플랫폼입니다.
                 </p>
 
                 <!-- 사용 기술 -->
                 <p class="tech-line" style="margin:.5rem 0 0 0;">
                     <strong>사용 기술</strong>
                     <span class="label">Python</span>
+                    <span class="label">FastAPI</span>
                     <span class="label">MySQL</span>
                     <span class="label">Pandas</span>
                     <span class="label">XGBoost</span>
                     <span class="label">RandomForest</span>
-                    <span class="label">LinearReg</span>
-                    <span class="label">Matplotlib</span>
-                    <span class="label">FastAPI</span>
                 </p>
 
                 <!-- 링크 -->
@@ -51,22 +49,14 @@ order: 2
                 <!-- 상세 보기 -->
                 <details id="sugarCare-detail" class="details-block" style="margin-top:.75rem;">
                     <summary>sugarCare 상세 보기</summary>
-                    <ul>
-                        <li><strong>기간/역할</strong>: '25. 9. 22. ~ 10. 15.(약 3주) / 데이터 전처리·모델링·웹 연동</li>
-                        <li><strong>문제정의</strong>: 개인 혈당 변동을 예측해 사전 관리에 도움</li>
-                        <li><strong>데이터</strong>: 혈당/식사/활동 로그(결측·이상치 처리, 시간 기반 파생)</li>
-                        <li><strong>모델</strong>: Linear Regression, RandomForest, XGBoost 비교 후 지표 기반 선택</li>
-                        <li><strong>특징</strong>: 이동통계(평균/최대/변화율), 식사·운동 플래그, 요일/시간대 패턴</li>
-                        <li><strong>평가</strong>: MAE/RMSE, 시계열 분할(누수 방지) <em>수치 추후 기입</em></li>
-
+                    <ul style="margin-top: 0.5rem;">
+                        <li><strong>기간/역할</strong>: '25. 9. 22. ~ 10. 15. (약 3주) / 데이터 파이프라인 구축 및 백엔드 API 연동</li>
                         <li>
-                            <strong>핵심기능</strong><br>
-                            · 입력받은 혈당 데이터를 기반으로 근시간 내 예측 가능<br>
-                            · 혈당 관리에 필요한 식단 및 강도별 활동 추천<br>
-                            · 식단 입력 시 혈당 위험 등급 표시로 음식별 위험도 알림<br>
-                            · 식단 및 앞으로의 방향성을 제공해주는 챗봇
+                            <strong>핵심 성과 및 기능</strong><br>
+                            · <strong>데이터 파이프라인:</strong> 결측치/이상치 처리 및 시간 기반 파생 변수(이동통계, 패턴) 생성<br>
+                            · <strong>AI 모델 서빙:</strong> XGBoost/RF 모델 학습 후, 예측 결과를 실시간 반환하는 FastAPI 연동 구축<br>
+                            · <strong>비즈니스 로직:</strong> 예측치 기반 고/저혈당 임계치 알림 및 식단 위험도 판별 챗봇 제공
                         </li>
-                        <li><strong>결과</strong>: 예측치 시각화 + 임계치 알림(고/저혈당)</li>
                     </ul>
                 </details>
             </div>
@@ -89,25 +79,21 @@ order: 2
             <!-- 오른쪽 텍스트 -->
             <div class="portfolio-body">
                 <header>
-                    <h3>HonestPick — 맛집 리뷰 신뢰도 웹사이트</h3>
+                    <h3>HonestPick — 데이터 정합성 기반 맛집 리뷰 서비스</h3>
                 </header>
 
                 <p style="margin-top:.5rem;">
-                    JSP와 DB 연동으로 구현한 <em>맛집 리뷰 웹사이트</em>로, 예약 기반 리뷰 기능을 통해
-                    사용자가 상대적으로 신뢰할 수 있는 후기만 볼 수 있도록 한 백엔드 웹페이지입니다.
+                    무분별한 리뷰를 방지하기 위해 <strong>'예약자 검증 세션'</strong>을 도입하여 데이터 신뢰도를 높였으며, 프레임워크 의존 없이 <strong>순수 JDBC와 DAO 패턴</strong>으로 구현해 DB 연동의 기본기를 다진 웹 서비스입니다.
                 </p>
 
                 <!-- 사용 기술 -->
                 <p class="tech-line" style="margin:.5rem 0 0 0;">
                     <strong>사용 기술</strong>
                     <span class="label">Java</span>
-                    <span class="label">JSP/Servlet(Model2)</span>
-                    <span class="label">JSTL</span>
-                    <span class="label">MVC 패턴</span>
-                    <span class="label">DAO</span>
-                    <span class="label">JDBC</span>
-                    <span class="label">Oracle</span>
-                    <span class="label">Session/Auth</span>
+                    <span class="label">JSP/Servlet(MVC)</span>
+                    <span class="label">Oracle DB</span>
+                    <span class="label">JDBC (DAO)</span>
+                    <span class="label">Session Auth</span>
                 </p>
 
                 <!-- 링크 -->
@@ -118,18 +104,14 @@ order: 2
                 <!-- 상세 보기 -->
                 <details id="honestpick-detail" class="details-block" style="margin-top:.75rem;">
                     <summary>HonestPick 상세 보기</summary>
-                    <ul>
-                        <li><strong>기간/역할</strong>: '25. 5. 8. ~ 6. 27. (약 7주) / 백엔드(회원·리뷰·신고 기능 구현)</li>
-                        <li><strong>아키텍처</strong>: JSP/Servlet 기반 MVC(Model2), DAO + JDBC, DB: Oracle</li>
-                        <li><strong>데이터 계층</strong>: Connection Pool, SQL 인젝션 방지, 트랜잭션/예외 처리 공통화</li>
+                    <ul style="margin-top: 0.5rem;">
+                        <li><strong>기간/역할</strong>: '25. 5. 8. ~ 6. 27. (약 7주) / 백엔드(회원·리뷰 인증 및 데이터 계층 설계)</li>
                         <li>
-                            <strong>핵심 기능</strong><br>
-                            · 회원·식당·리뷰·광고 등록/수정/삭제<br>
-                            · 식당 카테고리/검색<br>
-                            · 사용자별 권한(회원/점주/관리자)<br>
-                            · 관리자 통계(증감 수치 시각화) 및 관리 사이트
+                            <strong>핵심 성과 및 트러블슈팅</strong><br>
+                            · <strong>데이터 무결성 확보:</strong> 세션 기반 권한 제어(회원/점주)로 실제 예약 및 방문이 확인된 사용자만 리뷰 작성 허용<br>
+                            · <strong>아키텍처 기본기:</strong> Spring/MyBatis 없이 MVC 패턴과 순수 JDBC(Connection Pool)를 직접 구현하여 트랜잭션 및 예외 처리 원리 체득<br>
+                            · <strong>관리자 기능:</strong> SQL 인젝션 방어 처리 및 식당/리뷰/광고 데이터 증감 수치 시각화
                         </li>
-                        <li><strong>운영</strong>: 관리자 페이지에서 식당/리뷰/회원/광고 관리, 기본 로그 기록</li>
                     </ul>
                 </details>
             </div>

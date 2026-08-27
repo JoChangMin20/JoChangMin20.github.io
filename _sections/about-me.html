@@ -5,67 +5,80 @@ order: 1
 ---
 
 <div class="row about-row">
-    <div class="4u 12u$(mobile) image-col" style="display:flex;justify-content:center;">
-        <span class="image" style="display:inline-block;max-width:160px;">
-            <img src="{{ 'assets/images/profile.jpg' | relative_url }}" alt="조창민 프로필" style="border-radius:50%;box-shadow:0 6px 20px rgba(0,0,0,.08);" />
+    <!-- 프로필 이미지 영역 -->
+    <div class="4u 12u$(mobile) image-col">
+        <span class="image profile-img-wrap">
+            <img src="{{ 'assets/images/profile.jpg' | relative_url }}" alt="조창민 프로필" class="profile-img" />
         </span>
     </div>
-    <div class="8u 12u$(mobile) text-col" style="text-align:left;">
-        <p style="margin-top:0;">
-            안녕하세요, <strong>백엔드(Java/Spring)</strong>와 <strong>데이터 분석(Python, 전처리·모델링)</strong> 모두에 관심을 두고 성장 중인 <strong>
-            조창민</strong>입니다. 데이터를 근거로 요구사항을 정리하고, 신뢰 가능한 API·스키마로 구현해 서비스 품질을 높이는 개발자를 목표로 학습 중입니다.
+
+    <!-- 자기소개 텍스트 영역 -->
+    <div class="8u 12u$(mobile) text-col">
+        <p class="about-desc">
+            안녕하세요, 기본기를 다지며 실용적인 성장을 추구하는<br class="pc-br"> 백엔드 개발자 <strong>조창민</strong>입니다.
         </p>
+
+        <ul class="about-list">
+            <li>
+                기본에 충실한 꼼꼼함으로 데이터 유실 없는<br class="pc-br"> 안정적인 서버를 늘 고민하고 설계합니다.
+            </li>
+            <li>
+                레거시 유지보수부터 Spring-AI 연동까지, 주어지는 환경에 적응하며<br class="pc-br"> '돌아가는 코드'의 가치를 배워가고 있습니다.
+            </li>
+            <li class="no-margin">
+                스스로의 부족함을 인지하고, 꾸준한 기록과 문제 해결 과정을 통해<br class="pc-br"> 매일 조금씩 개선해 나갑니다.
+            </li>
+        </ul>
     </div>
 </div>
 
 <hr />
 
-<section class="box" style="border-radius:16px; padding:1.25rem; text-align:left;">
-    <h3 style="margin-top:0;">Education</h3>
-    <ul style="margin-top:.5rem;">
-        <li><strong>대경ICT산업협회</strong> — AI 데이터 분석 부트캠프 <span style="opacity:.8;">(’25. 7. 23. ~ 10. 16.)</span><br/>· 프로젝트 <strong>sugarCare</strong></li>
-        <li><strong>한국IT교육원</strong> — 백엔드 Java 양성과정 <span style="opacity:.8;">(’24. 11. 4. ~ ’25. 5. 1.)</span><br/>· 프로젝트 <strong>HonestPick</strong></li>
+<section class="box resume-box">
+    <h3 class="box-header">Career <span class="box-subtext">(실무 경력)</span></h3>
+    <ul class="resume-list">
+        <li class="resume-item">
+            <strong>(주)플래시21</strong> — 백엔드 개발 및 유지보수 <span class="duration">(4개월)</span>
+            <ul class="resume-sub-list">
+                <li><strong>중장비 특화 챗봇 (MSA 구축):</strong> Spring Boot(웹·앱 API) ↔ Python(GPT API) 연동 아키텍처 설계</li>
+                <li><strong>LLM 파이프라인 고도화:</strong> 실 데이터 수집 및 문서 벡터화(Vectorization)를 통한 RAG 기반 프롬프트 최적화</li>
+                <li><strong>레거시 서비스 고도화:</strong> Node.js, JSP, 전자정부프레임워크(eGov), Thymeleaf 환경의 유지보수 및 고객 요구사항 대응</li>
+            </ul>
+        </li>
+        <li>
+            <strong>공군 부사관</strong> — 행정·회계 실무 <span class="duration">(5년)</span>
+            <ul class="resume-sub-list">
+                <li>반복 업무 프로세스 자동화 및 예산·회계 데이터 정합성(무결성) 검증 시스템화</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="box resume-box">
+    <h3 class="box-header">Education</h3>
+    <ul class="resume-list">
+        <li><strong>대경ICT산업협회</strong> — AI 데이터 분석 부트캠프 <span class="duration">(’25. 7. 23. ~ 10. 16.)</span><br/>· 프로젝트: <strong>sugarCare (혈당 분석 및 예측)</strong></li>
+        <li><strong>한국IT교육원</strong> — 백엔드 Java 양성과정 <span class="duration">(’24. 11. 4. ~ ’25. 5. 1.)</span><br/>· 프로젝트: <strong>HonestPick (맛집 리뷰 신뢰도 웹서비스)</strong></li>
         <li><strong>학점은행제</strong> — 경영학과 학사 (2022)</li>
         <li><strong>영진전문대학교</strong> — 전문학사 (2017)</li>
     </ul>
 </section>
 
-<section class="box" style="border-radius:16px; padding:1.25rem; text-align:left;">
-    <h3 style="margin-top:0;">Career</h3>
-    <ul style="margin-top:.5rem;">
-        <li><strong>(주)플래시21 (4개월)</strong> — 소프트웨어 개발, 유지보수</li>
-        <li><strong>공군 부사관 (5년)</strong> — 행정·회계·기획, 반복업무 자동화/표준화, 데이터 정합성 개선</li>
+<section class="box resume-box">
+    <h3 class="box-header">Skill Stacks</h3>
+    <ul class="resume-list skill-list">
+        <li><strong>Backend:</strong> Java, Spring Boot, JSP/Servlet, Node.js</li>
+        <li><strong>Database & ORM:</strong> Oracle DB, MySQL, JPA, MyBatis, JDBC</li>
+        <li><strong>Data & ML:</strong> Python, FastAPI, Pandas, Vector DB, OpenAI API</li>
+        <li><strong>Frontend:</strong> HTML/CSS, JavaScript, Thymeleaf, React</li>
+        <li><strong>DevOps & Tools:</strong> Git/GitHub, Swagger(OpenAPI)</li>
     </ul>
 </section>
 
-<section class="box" style="border-radius:16px; padding:1.25rem; text-align:left;">
-    <h3 style="margin-top:0;">Skill Stacks</h3>
-    <ul style="margin-top:.5rem;">
-        <li><strong>Frontend</strong>:
-            HTML/CSS, JavaScript, jQuery, React
-        </li>
-        <li><strong>Backend</strong>:
-            Python, Java, JSP/Servlet(MVC Model2), Spring Boot, JPA/MyBatis
-        </li>
-        <li><strong>API</strong>:
-            REST 설계, OpenAPI(Swagger) 문서화, FastAPI(Python)
-        </li>
-        <li><strong>Data/ML</strong>:
-            Pandas, 전처리·시각화, Linear Regression, RandomForest, XGBoost, TensorFlow/Keras(기초)
-        </li>
-        <li><strong>Tools</strong>:
-            GitHub, IntelliJ, STS(Spring Tool Suite), VS Code, SQL Developer, MySQL Workbench
-        </li>
-    </ul>
-</section>
-
-
-
-
-<section class="box" style="border-radius:16px; padding:1.25rem; text-align:left;">
-    <h3 style="margin-top:0;">Certifications</h3>
-    <ul style="margin-top:.5rem;">
-        <li><strong>SQLD</strong></li>
-        <li><strong>정보처리기사</strong> — 필기 합격</li>
+<section class="box resume-box">
+    <h3 class="box-header">Certifications</h3>
+    <ul class="resume-list">
+        <li><strong>SQLD (국가공인 SQL 개발자)</strong></li>
+        <li><strong>정보처리기사</strong> — 필기 합격 (실기 준비 중)</li>
     </ul>
 </section>
